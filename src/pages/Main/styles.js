@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.svg';
 
 export const Header = styled.div`
   height: 70px;
@@ -7,16 +8,19 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 100px;
 `;
 
-export const LogoName = styled.h1`
-  margin-left: 180px;
-  color: #fff;
+
+
+export const Logo = styled.img.attrs({
+  src: logo
+})`
+  height: 60px;
 `;
 
 export const ButtonArea = styled.div`
   display: flex;
-  margin-right: 180px;
   background: #00a8ff;
   align-items: center;
 `;
@@ -30,13 +34,12 @@ export const HomeButton = styled(Link)`
   font-weight: bold;
   text-decoration: none;
   transition: opacity 0.2s;
-
   &:hover {
     opacity: 0.7;
   }
 `;
 
-export const CadastroButton = styled(Link)`
+export const CadastroButton = styled.button`
   background: #00a8ff;
   border: none;
   font-size: 20px;
@@ -44,7 +47,6 @@ export const CadastroButton = styled(Link)`
   color: #fff;
   text-decoration: none;
   transition: opacity 0.2s;
-
   &:hover {
     opacity: 0.7;
   }
@@ -67,7 +69,7 @@ export const SearchImg = styled.img`
 
 export const SearchTitle = styled.h1`
   position: absolute;
-  margin-top: 100px;
+  margin-top: 170px;
   font-weight: bold;
   color: #fff;
   z-index: 10;
@@ -75,7 +77,7 @@ export const SearchTitle = styled.h1`
 
 export const SearchInput = styled.input`
   position: absolute;
-  margin-top: 160px;
+  margin-top: 210px;
   border-radius: 18px;
   width: 40%;
   border-style: none;
@@ -86,7 +88,7 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   position: absolute;
-  margin-top: 210px;
+  margin-top: 260px;
   background: #00a8ff;
   width: 150px;
   height: 40px;
@@ -97,7 +99,6 @@ export const SearchButton = styled.button`
   font-size: 18px;
   z-index: 10;
   transition: opacity 0.2s;
-
   &:hover {
     opacity: 0.7;
   }
@@ -107,6 +108,7 @@ export const FinalFooter = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 180px;
+  margin-bottom: 20px;
 `;
 
 export const CopyRight = styled.h1`
@@ -123,7 +125,7 @@ export const ModalArea = styled.div`
   width: 600px;
   height: 280px;
   background: #0097e6;
-  position: absolute;
+  position: fixed;
   z-index: 15;
 `;
 
@@ -144,6 +146,12 @@ export const ModalInput = styled.input`
   z-index: 15;
 `;
 
+export const ModalSuccess = styled.p`
+  position: absolute;
+  z-index: 50;
+  margin-top: 215px;
+`;
+
 export const ModalButton = styled.button`
   width: 300px;
   height: 50px;
@@ -156,7 +164,6 @@ export const ModalButton = styled.button`
   color: #fff;
   font-weight: bold;
   transition: opacity 0.2s;
-
   &:hover {
     opacity: 0.7;
   }
@@ -172,3 +179,45 @@ export const ModalClose = styled.button`
   position: absolute;
 `;
 
+export const ResultArea = styled.div`
+  background: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ItemArea = styled.div`
+  background: #fff;
+  border-width: 1px;
+  border-radius: 4px;
+  width: 50%;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  box-shadow: 0 1px 20px #ddd;
+  margin: 10px 0;
+`;
+
+export const ButtonEdit = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #0097e6;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 0 4px 0 10px;
+  color: #fff;
+  font-weight: 700;
+`;
+
+export const Info = styled.h1`
+  margin: 5px;
+  font-size: 14px;
+`;
